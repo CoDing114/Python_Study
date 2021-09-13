@@ -971,5 +971,22 @@ print("우리가 만난지 100일은", today + td)  # 오늘 부터 100 후
 print()
 # ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
+
+# 추가 수업
+# zip
+kor = ["사과", "바나나", "오렌지"]
+eng = ["apple", "banan", "orage"]
+# 합치기
+print(list(zip(kor, eng)))
+
+# 리스트 분기
+mixed = [('사과', 'apple'), ('바나나', 'banana'), ('오렌지', 'orange')]
+print(list(zip(*mixed)))
+
+# 분리
+kor2, eng2 = zip(*mixed)
+print(kor2)
+print(eng2)
+
 # 12.Outro
 byme.sign()
