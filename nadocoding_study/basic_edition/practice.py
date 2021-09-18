@@ -979,7 +979,7 @@ eng = ["apple", "banan", "orage"]
 # 합치기
 print(list(zip(kor, eng)))
 
-# 리스트 분기
+# 리스트 분리
 mixed = [('사과', 'apple'), ('바나나', 'banana'), ('오렌지', 'orange')]
 print(list(zip(*mixed)))
 

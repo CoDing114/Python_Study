@@ -44,3 +44,11 @@ print(lst)
 # . (ca.e)  : 하나의 문자를 의미 > care,cafe(o) | caffe (x)
 # ^ (^de)   : 문자열의 시작 > desk, destina(o)  | fade  (x)
 # $ (se$)   : 문자열의 끝 > case, base(o)       | face  (x)
+
+
+# .startswith(): xx로 시작하는 element 찾기
+# https://search4.kakaochd.net/argon/130x130 으로 url 완성하기
+images_url = "//search4.kakaochd.net/argon/130x130"
+for image in images_url:
+    if image_url.startswith("//"):  # 시작 문단에 "//"가 잇는문단 만찾느다
+        image_url = "https:" + image_url

@@ -12,7 +12,7 @@ for i in range(0, 6):
     res.raise_for_status()
 
     soup = BeautifulSoup(res.text, "lxml")
-
+    # 쿠팡 노트북 가격 정보 가져오기
     items = soup.find_all(
         "li", attrs={"class": re.compile("^search-product")})  # dl태그 - class 가 ^search-product-wrap으로 시작하는 element 전부 찾기
     for item in items:
