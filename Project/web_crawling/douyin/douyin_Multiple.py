@@ -4,10 +4,11 @@ from selenium import webdriver  # pip install selenium
 import time
 
 
+
 def drop_down():
     '''执行页面滚动操作'''  # javascript
     for x in range(1, 30, 4):  # 在你不断地下拉过程中,页面高度会变
-        time.sleep(1)
+        time.sleep(2)
         j = x / 9
         # document.documentElement.scrollTop 指定滚动条的位置
         # document.documentElement.scrollHeight 获取浏览器页面的最大高度
@@ -15,8 +16,8 @@ def drop_down():
         driver.execute_script(js)
 
 
-driver = webdriver.Chrome('D:\Downloads\chromedriver.exe')  # 实例化浏览器对象
-driver.get('https://www.douyin.com/user/MS4wLjABAAAAX9Yu0jmn_mGK0EAWKP7nJ49OStJ3gy3Vc_a0F81rMaUa3SRGFNmm2MZP2wGZPuSD')
+driver = webdriver.Chrome('D:\Downloads\coding\chromedriver.exe')  # 实例化浏览器对象
+driver.get('https://www.douyin.com/user/MS4wLjABAAAAvOU5GclmETa4jehXAEspnMfYJQZAbwcJzfUFhZk4cP8')
 time.sleep(3)
 drop_down()
 
@@ -29,9 +30,8 @@ for li in lis:
     href = li.find_element_by_css_selector('a').get_attribute('href')
     print(href)
 
-    # url = 'https://www.douyin.com/video/7013943353687526670'
     headers = {
-        'cookie': 'douyin.com; MONITOR_DEVICE_ID=720e864d-040d-47c8-93f9-1a2c6150fad4; ttcid=f7f9e0bdeaf346eca7312dff0bf942e331; ttwid=1%7C0rfjFX0qP0BEqRw8qQgsZw61UxjgYOPDyiLcuuX4Jao%7C1633172131%7C18310c5b2b7188be8ff944c9a07b1e59c6075eed6e58b9f8036135033b064a62; _tea_utm_cache_6383=undefined; MONITOR_WEB_ID=aa2d0200-5db2-438e-927c-76b674ace5a1; s_v_web_id=verify_a42976d1dfdc9a6f6bab48d1b604c73b; _tea_utm_cache_2018=undefined; tt_scid=fGmXMBkNeh0KWnGY03ElJWP-6ksxesJTBNDzO16v4YT1clx76yL3bA2Ki4kZmZDce3c3; passport_csrf_token_default=8e373b034ece2ea014ec8f533ff001e0; passport_csrf_token=8e373b034ece2ea014ec8f533ff001e0; msToken=0HF0HeusVxvpR9WvnLrY3b_GVzxz3drlw6-lCKgpQKyZrZZCbm3J1_bhXAk8bodtY4VIe__ea81Xl4qM5ofd3JZ2K22VqBS47Y-ABVh5Ckije4Nk4GHVG5Hm; __ac_nonce=0615845cf00b5ba25fcbb; __ac_signature=_02B4Z6wo00f01uhZgZAAAIDCaFt70OVYQFboeaUAANtbWmA6.yCTrVXx6or.n432f3Y7rVSbeJFIqI6gaciqwX9UcMVGJoafd4uizI.G9rWKdfwlOJrdMNM4W81QGW6TX4X1EHrv7iWqkiqBfb; __ac_referer=https://www.douyin.com/user/MS4wLjABAAAAX9Yu0jmn_mGK0EAWKP7nJ49OStJ3gy3Vc_a0F81rMaUa3SRGFNmm2MZP2wGZPuSD',
+        'cookie': 'douyin.com; ttwid=1%7Cjf3oEBDRWDhAY7jUZZPd65SveMstsiLp0BN_dCZ_cUg%7C1633059331%7C829b6e8b8788ec4ee2495eefe6fb43dcfe2eaab4077b5caeec45ed122213c988; MONITOR_WEB_ID=50239bb2-6b9b-496c-90bf-6502948ad221; _tea_utm_cache_6383=undefined; passport_csrf_token_default=dcff7650cd75eba46e66547b98186986; passport_csrf_token=dcff7650cd75eba46e66547b98186986; ttcid=405c751f528f47f691371a33ce5fa73540; n_mh=RxZ96r-fRYrXy7RFX1JwwMNzmyRaK0JUztOPZ6y5R1c; sso_uid_tt=4d9a6e18525243ea1bb0bbf494628e4d; sso_uid_tt_ss=4d9a6e18525243ea1bb0bbf494628e4d; toutiao_sso_user=5691c8e6af0b707e5ba5f8ce75a3d673; toutiao_sso_user_ss=5691c8e6af0b707e5ba5f8ce75a3d673; uid_tt=4d9a6e18525243ea1bb0bbf494628e4d; uid_tt_ss=4d9a6e18525243ea1bb0bbf494628e4d; sid_tt=5691c8e6af0b707e5ba5f8ce75a3d673; sessionid=5691c8e6af0b707e5ba5f8ce75a3d673; sessionid_ss=5691c8e6af0b707e5ba5f8ce75a3d673; sid_guard=5691c8e6af0b707e5ba5f8ce75a3d673%7C1633060387%7C5183985%7CTue%2C+30-Nov-2021+03%3A52%3A52+GMT; odin_tt=6070a41b2cb4c316825907755499d288fe62bf39c271a97b5fa4f3fd030abc83150b4bef3eda494938121cf3cdd88e06; _tea_utm_cache_2018=undefined; MONITOR_DEVICE_ID=c3605643-db4f-4391-843a-4bd080cf1f81; msToken=QkvjB2mVY3-3eH7Ootw4wIhaswCss_zmaMg8m10HY46wG3xKcgF88NL-2Xyzk8LrKD5Ktf4s7fVe__LRAiQvQGaTx8oPTb2Vv9sBXz3Von7OjOqcnDyuq9w=; douyin.com; msToken=H-1PvOkoiTPLORcaaAjjzuUzrNOLNXsJ_mFu0LekpxwYM42YqUMpdDgDkyeu_iEa73umf50b8227ZKEJWeFYSprNYCfJyhUDTMQ1N8OaHz1CIJqJ6xn7aTc=; tt_scid=JBdE.tY-12STcY5yxRddT-9cmkABGD0HYtu9.57I7-VHpSS6dxrqIc-uMWYEvRGreafe; __ac_nonce=0615dea9e009c95cfa6f0; __ac_signature=_02B4Z6wo00f01NCwUmQAAIDAjoWhEHdnW2TQlFbAAFV3a8rguBuM1BfFE7b8dXd-rlV20vZohaBnEqoeTGiQvmYId.RYCYNsVONUqLn9BPxPjlNVjs2gb5uy.NJ37wSwO-yY-vt.eMHow-2y37; __ac_referer=__ac_blank',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36'
     }
 
@@ -50,4 +50,4 @@ for li in lis:
     # print(href)
     print(video_url)
 
-# driver.quit()
+driver.quit()
